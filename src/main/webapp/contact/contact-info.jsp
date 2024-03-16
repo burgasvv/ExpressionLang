@@ -6,7 +6,6 @@
 <body>
     <%
         Cookie cookie = new Cookie("nickName", "Sam");
-        cookie.setSecure(true);
         response.addCookie(cookie);
     %>
     <div style="margin: 100px">
