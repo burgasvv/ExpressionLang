@@ -6,6 +6,7 @@
 <body>
     <%
         Cookie cookie = new Cookie("nickName", "Sam");
+        cookie.setSecure(true);
         response.addCookie(cookie);
     %>
     <div style="margin: 100px">
@@ -15,7 +16,7 @@
         <p>Age: ${param.get("age")}</p>
         <p>Main phone: ${paramValues.get("phone")[0]}</p>
         <p>Additional phone: ${paramValues.get("phone")[1]}</p>
-        <p>Nickname: ${cookie.get("nickName").value}</p>
+        <p>Nickname: ${cookie.get("nickName").getValue()}</p>
         <p>User-Agent: ${header.get("user-agent")}</p>
         <p>Host: ${header.get("host")}</p>
         <p>Connection: ${header.get("connection")}</p>
