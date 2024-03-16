@@ -5,7 +5,8 @@
 </head>
 <body>
     <%
-        response.addCookie(new Cookie("nickName", "Sam"));
+        Cookie cookie = new Cookie("nickName", "Sam");
+        response.addCookie(cookie);
     %>
     <div style="margin: 100px">
         <h2>Contact info:</h2>
